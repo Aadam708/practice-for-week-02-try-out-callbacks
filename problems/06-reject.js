@@ -23,6 +23,18 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 
 function reject(array, cb) {
   // Your code here
+  let arr = []
+
+  for (let i =0; i<array.length; i++){
+
+    let item = array[i]
+
+    if (!cb(item)){
+      arr.push(item)
+    }
+  }
+
+  return arr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

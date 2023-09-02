@@ -31,6 +31,19 @@ console.log(chainMap(4, half, square));         // 4
 
 function chainMap(val, ...callbacks) {
   // Your code here
+
+  let callback_arr = [...callbacks]
+
+  let num = val
+
+  for (let i = 0; i<callback_arr.length; i++){
+
+    let cb = callback_arr[i]
+
+    num = cb(num)
+  }
+
+  return num
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

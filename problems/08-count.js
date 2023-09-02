@@ -28,6 +28,21 @@ console.log(result4); // 0
 
 function count(array, cb) {
   // Your code here
+
+  let count_times = 0
+
+  for (let i =0; i<array.length; i++){
+
+    let item = array[i]
+
+    let res = cb(item)
+
+    if (res === true){
+      count_times++
+    }
+  }
+
+  return count_times
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -39,6 +39,23 @@ console.log(result6);   // true
 
 function one(array, cb) {
   // Your code here
+  let one = 0
+  for (let i =0; i<array.length; i++){
+
+    let el = array[i]
+
+    let res = cb(el,i,array)
+
+    if (res){
+      one ++
+    }
+
+  }
+
+  if (one !== 1){
+    return false
+    }
+  return true
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -18,6 +18,19 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 function myMap(array, cb) {
     // Your code here
+
+    let arr = []
+
+    for (let i=0; i<array.length; i++){
+
+        let ele = array[i]
+
+        let new_ele = cb(ele,i,array)
+
+        arr.push(new_ele)
+    }
+
+    return arr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
